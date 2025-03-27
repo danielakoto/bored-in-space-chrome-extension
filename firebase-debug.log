@@ -1,0 +1,49 @@
+[debug] [2025-02-03T18:21:52.069Z] ----------------------------------------------------------------------
+[debug] [2025-02-03T18:21:52.070Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\12403\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-02-03T18:21:52.070Z] CLI Version:   13.29.3
+[debug] [2025-02-03T18:21:52.071Z] Platform:      win32
+[debug] [2025-02-03T18:21:52.071Z] Node Version:  v20.13.1
+[debug] [2025-02-03T18:21:52.071Z] Time:          Mon Feb 03 2025 13:21:52 GMT-0500 (Eastern Standard Time)
+[debug] [2025-02-03T18:21:52.071Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-03T18:21:52.073Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-02-03T18:21:52.099Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-03T18:21:52.100Z] > authorizing via signed-in user (sult4nbiz@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\12403\Code\bored-in-space-chrome-game
+
+[debug] [2025-02-03T18:21:52.242Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-02-03T18:21:52.242Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-02-03T18:23:54.959Z] Checked if tokens are valid: false, expires at: 1738379293881
+[debug] [2025-02-03T18:23:54.959Z] Checked if tokens are valid: false, expires at: 1738379293881
+[debug] [2025-02-03T18:23:54.959Z] > refreshing access token with scopes: []
+[debug] [2025-02-03T18:23:54.960Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-02-03T18:23:54.960Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-02-03T18:23:55.053Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-02-03T18:23:55.053Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-02-03T18:23:55.057Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-02-03T18:23:55.057Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"firebase projects:create","name":"firebase projects:create"}
+[debug] [2025-02-03T18:23:55.173Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2025-02-03T18:23:55.173Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"Cannot create domain prefixed projects"},{"field":"display_name","description":"project display name contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2025-02-03T18:23:55.226Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 400, Request contains an invalid argument.
+    at responseToError (C:\Users\12403\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\12403\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.

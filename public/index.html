@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bored in Space</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/office/80/000000/controller.png">
+    </head>
+    <body >
+        <div class="scoredetails">
+            <center>
+                <p id="highestnumber" class="highestnumber"></p>
+                <p id="finscore" class="finscore"></p>
+            </center>
+        </div>
+       <center>
+            <div id='SplashScreen'>
+                <h1 id="boredInSpace">Bored in Space</h1>
+                <input type="submit" id='StartButton' value='Start' style="color: black;">
+                <input type='text' id='score' name='score' style="display: none;"><br>
+                <p id="statement" class="statement">Evade the enemies and save the space men!</p>
+                <p class="statement">You have 3 lives..</p>
+            </div>
+        </center>
+
+        <canvas id='canvasback' >Your browser is not supported fro HTML5 canvas tag.</canvas>
+        <canvas id="canvas1" >Your browser is not supported fro HTML5 canvas tag.</canvas>
+        <!-- <button onclick="gameOver()" id='endgame' class="endgameclass" style="display: none;">End Game</button> -->
+	</body>
+    <script src='script.js' defer></script>
+</html>
